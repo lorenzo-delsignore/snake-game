@@ -1,0 +1,22 @@
+name: Check Suite
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v3
+        with:
+           python-version: 3.x
+
+      - run: pip3 install 'gdtoolkit==4.*'
+
+      - name: Lint
+        run: gdlint **/*.gd
