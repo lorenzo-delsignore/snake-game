@@ -1,9 +1,8 @@
 class_name SnakeGame extends Node2D
 
-@onready
-var _step_timer := $StepTimer
+@onready var _step_timer := $StepTimer
 
-var _running : bool = false
+var _running := false
 
 func start_game():
 	if _running:

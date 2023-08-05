@@ -1,11 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bakd4gkaxi1pd"]
+[gd_scene load_steps=3 format=3 uid="uid://bakd4gkaxi1pd"]
 
 [ext_resource type="Script" path="res://snake_game.gd" id="1_rmb2k"]
+[ext_resource type="PackedScene" uid="uid://dggb6jnw817pd" path="res://player.tscn" id="2_x6l3j"]
 
 [node name="SnakeGame" type="Node2D"]
 script = ExtResource("1_rmb2k")
 
 [node name="StepTimer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="Player" parent="." node_paths=PackedStringArray("_game") instance=ExtResource("2_x6l3j")]
+_game = NodePath("..")
 
 [connection signal="timeout" from="StepTimer" to="." method="_on_step_timer_timeout"]

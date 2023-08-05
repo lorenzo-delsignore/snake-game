@@ -1,10 +1,10 @@
 class_name Player extends Node2D
 
-var _game : SnakeGame = null
-var _desired_dir := Vector2i()
+# Add backwards reference to the game instance.
+@export var _game : SnakeGame = null
 
-func _init(game : SnakeGame):
-	_game = game
+# Direction we will try to turn the snake towards.
+var _desired_dir := Vector2i()
 
 func _handle_input():
 	if Input.is_action_just_pressed("Begin"):
