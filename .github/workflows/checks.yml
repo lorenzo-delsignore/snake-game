@@ -17,4 +17,4 @@ jobs:
         run: pip3 install "gdtoolkit==3.*"
 
       - name: Linting checks
-        run: bash -O globstar -O nullglob -O dotglob -c 'for f in ./**/*.gd ; do gdlint "$f" || ((err++)) ; done ; ((!err))'
+        run: gdlint .
