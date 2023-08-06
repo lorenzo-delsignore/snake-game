@@ -17,7 +17,7 @@ func _handle_input():
 	if Input.is_action_just_pressed("Turn_Down"):
 		_desired_dir = Vector2i(0, 1)
 	if Input.is_action_just_pressed("Turn_Right"):
-		_desired_dir = Vector2i(-1, 0)
+		_desired_dir = Vector2i(1, 0)
 
 
 func _process(delta):
