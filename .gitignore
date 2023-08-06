@@ -2,3 +2,5 @@
 .godot/
 # Libre Lock
 .~lock.*#
+# Python virtualenv
+venv
